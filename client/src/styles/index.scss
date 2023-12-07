@@ -1,0 +1,372 @@
+@import "../App.css";
+@import "./reset";
+@import "animate.css";
+
+$theme-color-primary: #ffa500;
+$theme-color-secondary: #3e183f;
+// other possible color combinations
+// --theme-color-primary: #070a09;
+// --theme-color-secondary: #ff0000;
+
+:root {
+  --theme-color-primary: #{$theme-color-primary};
+  --theme-color-secondary: #{$theme-color-secondary};
+}
+
+[data-theme="light"] {
+  --theme-color-primary: #ffa500;
+  --theme-color-secondary: #3e183f;
+}
+[data-theme="dark"] {
+  --theme-color-primary: #3e183f;
+  --theme-color-secondary: #ffa500;
+}
+
+$transition: (
+  easing: ease-in-out,
+  speed-slow: 175ms,
+  speed-fast: 125ms,
+);
+
+@mixin sm {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin md {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+
+.AppUI__typography {
+  &__h1 {
+    font-family: system-ui, sans-serif;
+    font-size: 3.3rem;
+    @include md() {
+      transition: font-size 0.8s ease-in-out;
+      font-size: 2rem;
+    }
+    @include sm() {
+      transition: font-size 0.8s ease-in-out;
+      font-size: 1.8rem;
+    }
+
+    font-weight: 900;
+    line-height: 1;
+    color: var(--theme-color-secondary);
+  }
+  &__h2 {
+    font-family: system-ui, sans-serif;
+    font-size: 3rem;
+    line-height: 1;
+
+    color: var(--theme-color-secondary);
+  }
+  &__h3 {
+    font-family: system-ui, sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--theme-color-secondary);
+  }
+  &__h4 {
+    font-family: system-ui, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 900;
+    color: var(--theme-color-secondary);
+  }
+  &__bodycopy {
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.3;
+    color: var(--theme-color-secondary);
+    text-transform: capitalize;
+  }
+  &__input-copy {
+    font-family: Arial;
+    line-height: 1;
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--theme-color-secondary);
+    &::placeholder {
+      color: var(--theme-color-secondary);
+      opacity: 0.3;
+      font-weight: 900;
+      text-align: center;
+    }
+  }
+
+  &__code__copy {
+    font-family: monospace;
+    font-size: 1rem;
+    line-height: 1;
+    color: var(--theme-color-secondary);
+  }
+}
+
+.AppUI__utilities {
+  &__gridx3 {
+    display: grid;
+    transform-origin: center;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__row {
+    display: flex;
+    flex-flow: row;
+    gap: 1rem;
+  }
+
+  &__spacer__p-l-20px {
+    padding-left: 20px;
+  }
+
+  &__button__primary {
+    background: var(--theme-color-primary);
+    border: 1px solid var(--theme-color-secondary);
+    border-radius: 0.5rem;
+    @extend .AppUI__typography__bodycopy;
+    padding: 0.735rem;
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+    cursor: pointer;
+
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    &:disabled {
+      background: var(--theme-color-primary);
+      border: 1px solid var(--theme-color-secondary);
+      border-radius: 0.5rem;
+      opacity: 0.3;
+      transition: all 0.5s ease-in-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      box-shadow: rgba(62, 24, 63, 100%) 0px 20px 30px -10px;
+      transition: all 0.4s ease-in-out;
+      cursor: arrow;
+    }
+  }
+  &__button__danger {
+    background: transparent;
+    @extend .AppUI__typography__h4;
+    cursor: pointer;
+    border: 0;
+  }
+  &__button__option {
+    background: transparent;
+    @extend .AppUI__typography__h3;
+    cursor: pointer;
+    border: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+    &:focus,
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+
+.AppUI {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: var(--theme-color-secondary);
+  min-height: 100vh;
+
+  @include sm {
+    padding: 0.5rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 728px;
+    position: relative;
+    min-width: 300px;
+    padding: 3rem 2.2rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    @include sm {
+      padding: 1.5rem;
+    }
+    border-radius: 1rem;
+    border: 2px solid var(--theme-color-secondary);
+    background: var(--theme-color-primary);
+
+    transition: map-get($transition, speed-slow) box-shadow
+        map-get($transition, easing),
+      map-get($transition, speed-slow) transform map-get($transition, easing);
+    &:focus-within {
+      box-shadow: 0px 0.2em 2.5em #ffffff;
+      transform: scale(1.025);
+
+      // Remove the scaling for those who don't want animation.
+      @media screen and (prefers-reduced-motion: reduce) {
+        box-shadow: none;
+        transform: none;
+      }
+    }
+  }
+
+  &__header {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 1rem;
+    &__title {
+      @extend .AppUI__typography__h1;
+      border-bottom: 4px solid var(--theme-color-secondary);
+      padding-bottom: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    &__design {
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 8px,
+        currentcolor 8px,
+        currentcolor 10px
+      );
+
+      padding: 0px;
+      aspect-ratio: 6 / 1;
+      border: 0px;
+      display: block;
+      color: var(--theme-color-secondary);
+    }
+  }
+
+  &__instructions {
+    border: 2px solid var(--theme-color-secondary);
+    position: relative;
+    padding: 1.5rem;
+    width: 100%;
+
+    &__title {
+      background: var(--theme-color-primary);
+      position: absolute;
+      @extend .AppUI__typography__bodycopy;
+      top: -10px;
+      left: 19px;
+    }
+    &__copy {
+      @extend .AppUI__typography__code__copy;
+    }
+
+    &__css-spacer {
+      @extend .AppUI__utilities__spacer__p-l-20px;
+    }
+  }
+  &__form {
+    @extend .AppUI__utilities__gridx3;
+    border-left: 4px solid var(--theme-color-secondary);
+    padding-left: 2rem;
+    @include sm() {
+      padding-left: 1rem;
+    }
+    align-items: center;
+    width: 100%;
+
+    @include md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__submit-button {
+      @extend .AppUI__utilities__button__primary;
+    }
+
+    &__tooltips {
+      display: flex;
+      flex-flow: column;
+      width: 100%;
+      padding: 2rem;
+      text-align: center;
+      @extend .AppUI__typography__bodycopy;
+    }
+
+    &__alert-validation {
+    }
+    &__alert-validation-success {
+    }
+    &__alert-submitted {
+    }
+  }
+  &__input-text {
+    @extend .AppUI__typography__input-copy;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    background: var(--theme-color-primary);
+    border: 1px solid var(--theme-color-secondary);
+
+    &__label {
+      @extend .AppUI__typography__h4;
+    }
+  }
+
+  &__todos__results {
+    padding: 2rem 0;
+    width: 100%;
+  }
+  &__todos__list {
+    @extend .AppUI__utilities__gridx3;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__listitem {
+      width: 100%;
+      display: flex;
+      @extend .AppUI__typography__bodycopy;
+      border-radius: 0.5rem;
+      transform-origin: center;
+      padding: 2rem;
+      border: 2px solid var(--theme-color-secondary);
+      box-shadow: rgba(62, 24, 63, 70%) 0px 20px 30px -10px;
+      position: relative;
+
+      transition: all 0.2s ease-in-out;
+      @include sm {
+        padding: 1rem;
+      }
+
+      &:hover,
+      &:focus,
+      &:focus-within {
+        box-shadow: rgba(62, 24, 63, 100%) 0px 20px 30px -10px;
+        transition: all 0.4s ease-in-out;
+        cursor: arrow;
+      }
+    }
+
+    &__listitem__button {
+      @extend .AppUI__utilities__button__danger;
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 0;
+    }
+  }
+}
