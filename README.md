@@ -3,17 +3,14 @@
 ### [Live link for the frontend](https://grateful-teststack.surge.sh/) 🥳
 
 ## Getting started 🏄‍♂️
-### Install Backend: Navigate to /server: then do a  _npm i_ / _npm install_
-### Run Backend:  _npm run start_
-
-
 💾 ### Install Frontend:  navigate to /client: then do a _npm i_ / _npm install_
 💾### Run Backend:  _npm run dev_
 
-💾 #### Run Backendproject navigate to /server:  npm run start_.
+💾 #### Run Backendproject navigate to /server:  npm _run start_.
 💾 #### @ the backend is going to need a MongoDb Env key/db config string. feel free to use your own if you have one 💡
 
-## Frontend --- Boot Strapped with Vite and front end features/functionality build out with React Hooks, Typescript, SCSS and React Hook Form 
+## About ✨
+## Frontend --- Bootstrapped with Vit, then Frontend features/functionality build out with React Hooks, Typescript, SCSS and React Hook Form
 ## BackEnd --- Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""
  
 
