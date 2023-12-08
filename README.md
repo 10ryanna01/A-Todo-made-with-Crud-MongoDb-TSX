@@ -2,11 +2,21 @@
 
 ### [Live link for the frontend](https://grateful-teststack.surge.sh/) 🥳
 
-### getting started 🏄‍♂️
+### Getting started 🏄‍♂️
+#### Install Backend:  navigate to /server: then do a  npm i_. / npm install_.
+#### Run Backend:   npm run start_.
+
+
+#### Install Frontend:  navigate to /client: then do a npm i_. / npm install_.
+#### Run Backend:  npm run dev_.
+
+#### Run Backendproject navigate to /server:  npm run start_.
 #### @ the backend is going to need a MongoDb Env key/db config string. feel free to use your own if you have one 💡
 
-## Frontend
-## Built with,React Hooks, Typescript,SCSS / as responsive as possible and some research on the UI look and feel
-## Accessabile as much as possible @ ReactHookForm methods to make sure user is aware of progress in creating TODOs
+## Frontend --- Boot Strapped with Vite, Built React Hooks, Typescript, SCSS and React Hook Form 
+## BackEnd --- Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""
+ 
+
+##  Made Accessabile / scaled to be as responsive as much as possible @ ReactHookForm methods to make sure user is aware of progress in creating TODOs
 ### Overall  A Fun exercise in working with MiddleWear / DB to post Crud actions to
 
