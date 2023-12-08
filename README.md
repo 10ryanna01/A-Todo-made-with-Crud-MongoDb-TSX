@@ -1,6 +1,6 @@
 # FrontEnd Todo --- Make it Work, Make it Right and Make it Fast 🤹‍♀️  
 
-### [Live link for the frontend](https://grateful-teststack.surge.sh/){:target="_blank"} 🥳  
+### [Live link for the frontend](https://grateful-teststack.surge.sh/) 🥳  
 
 ## Getting started 🏄‍♂️
 💾 ### Install Frontend: Navigate to /client: then do a _npm i_ / _npm install_  
