@@ -10,8 +10,8 @@
 💾 #### @ the backend is going to need a MongoDb Env key/db config string. feel free to use your own if you have one 💡
 
 ## About ✨
-## Frontend --- Bootstrapped with Vit, then Frontend features/functionality build out with React Hooks, Typescript, SCSS and React Hook Form
-## BackEnd --- Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""
+### Frontend --- Bootstrapped with Vit, then Frontend features/functionality build out with React Hooks, Typescript, SCSS and React Hook Form
+### BackEnd --- Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""
  
 
 ##  Made Accessabile / scaled to be as responsive as much as possible @ ReactHookForm methods to make sure user is aware of progress in creating TODOs
