@@ -13,7 +13,7 @@
 ## About ✨
 ### Frontend 
 #### Bootstrapped with Vite, with Frontend features/functionality build out in React Hooks, Typescript, SCSS and React Hook Form  
-#### BackEnd 
+### BackEnd 
 #### Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""  
  
 ####  Made Accessible  / scaled to be as responsive as much as possible @ WCAG conventions & ReactHookForm methods to make sure user is aware of progress steps in creating TODOs
