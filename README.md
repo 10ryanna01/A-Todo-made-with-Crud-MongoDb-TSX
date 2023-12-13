@@ -8,10 +8,12 @@
  
 ## About ✨
 ### Frontend 💻
-#### Bootstrapped with Vite, with Frontend features/functionality build out in React Hooks, Typescript, SCSS & React Hook Form 🧪
-### BackEnd 💻
-#### Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""  💡  
-#### Backend is Hosted on render.com, so any front end build should just work to get/push/update/store changes 🎉
+#### Bootstrapped with Vite
+#### Features/functionality build with React Hooks, Typescript, SCSS & React Hook Form 🧪
+### Backend 💻
+#### Backend is Hosted on render.com, so any frontend build should just work to get/push/update/store changes 🎉
+#### For local build Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""  💡  
+
  
 ####  Made Accessible  / scaled to be as responsive as much as possible @ WCAG conventions & ReactHookForm methods to make sure user is aware of progress steps in creating TODOs
 #### Overall  A Fun exercise in working with MiddleWear / DB to post Crud actions to
