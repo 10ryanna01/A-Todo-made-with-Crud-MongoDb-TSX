@@ -3,17 +3,13 @@
 ### [Live link for the frontend](https://truculent-coolss.surge.sh/) 🥳  
 
 ## Getting started 🏄‍♂️
-💾 ### Install Frontend: Navigate to /client: then do a _npm i_ / _npm install_  
-💾 ### Run Frontend:  Navigate to /client: then do a _npm run dev_  
-
-💾 ### Install Backend navigate to /server:  _npm i_ / _npm install_  
-💾 ### Run Backend navigate to /server:  _npm run start_  
-💾 ### @ the backend is going to need a MongoDb Env key/db config string. feel free to use your own if you have one 💡  
+### 💾 Install Frontend: Navigate to /client: then do a _npm i_ / _npm install_  
+### 💾 Run Frontend:  Navigate to /client: then do a _npm run dev_  
  
 ## About ✨
 ### Frontend 💻
-#### Bootstrapped with Vite, with Frontend features/functionality build out in React Hooks, Typescript, SCSS and React Hook Form  
-### BackEnd  💻
+#### Bootstrapped with Vite, with Frontend features/functionality build out in React Hooks, Typescript, SCSS & React Hook Form 🧪
+### BackEnd 💻
 #### Using MongoDB (just rename ".setup-sample" to .env) and add in your server string @ in: MONGO_CFG=""  💡  
 #### Backend is Hosted on render.com, so any front end build should just work to get/push/update/store changes 🎉
  
